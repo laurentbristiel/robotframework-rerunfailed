@@ -4,6 +4,11 @@ rm -f output/rerun.xml
 rm -f output/first_run_log.html
 rm -f output/second_run_log.html
 
+echo
+echo "#######################################"
+echo "# Running portfolio a first time      #"
+echo "#######################################"
+echo
 pybot --outputdir output $@
 
 # we stop the script here if all the tests were OK
@@ -17,6 +22,11 @@ fi
 cp output/log.html  output/first_run_log.html
 
 # we launch the tests that failed
+echo
+echo "#######################################"
+echo "# Running again the tests that failed #"
+echo "#######################################"
+echo
 pybot --outputdir output --nostatusrc --rerunfailed output/output.xml --output rerun.xml $@
 # => Robot Framework generates file rerun.xml
 
@@ -24,5 +34,10 @@ pybot --outputdir output --nostatusrc --rerunfailed output/output.xml --output r
 cp output/log.html  output/second_run_log.html
 
 # Merging output files
+echo
+echo "########################"
+echo "# Merging output files #"
+echo "########################"
+echo
 rebot --nostatusrc --outputdir output --output output.xml --rerunmerge output/output.xml  output/rerun.xml
 # => Robot Framework generates a new output.xml

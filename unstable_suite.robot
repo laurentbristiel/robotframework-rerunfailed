@@ -2,6 +2,9 @@
 Library  String
 
 *** Test Cases ***
+stable_test
+    should be true  ${True}
+
 unstable_test
     ${bool} =  random_boolean
     should be true  ${bool}

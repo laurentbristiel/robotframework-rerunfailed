@@ -39,5 +39,5 @@ echo "########################"
 echo "# Merging output files #"
 echo "########################"
 echo
-rebot --nostatusrc --outputdir output --output output.xml --rerunmerge output/output.xml  output/rerun.xml
+rebot --nostatusrc --outputdir output --output output.xml --merge output/output.xml  output/rerun.xml
 # => Robot Framework generates a new output.xml

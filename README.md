@@ -1,5 +1,6 @@
 # robotframework-rerunfailed
-Robot Framework re-execution of failed test cases example
+Robot Framework re-execution of failed test cases example.
+The script and the test hosted here are used in a [blog article](http://laurent.bristiel.com/re-executing-failed-test-cases-and-merging-outputs-with-robot-framework/) that shows how to use --rerunfailed and --merge.
 
 Usage: 
 ```

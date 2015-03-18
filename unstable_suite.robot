@@ -1,5 +1,7 @@
 *** Settings ***
-Library  String
+Library   String
+Metadata  Log of First Run   [first_run_log.html|first_run_log.html]
+Metadata  Log of Second Run  [second_run_log.html|second_run_log.html]
 
 *** Test Cases ***
 stable_test

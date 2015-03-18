@@ -5,8 +5,9 @@ Usage:
 ```
 ./launch_test_and_rerun.sh test-example.robot
 ```
-will run our unstable test, and if it fails, it will run it again.
-Then it will merge the 2 executions in a single output/log/report set of files.
+will run our unstable suite that contains a stable test and an unstable one.
+If the unstable fails, we will launch it again.
+Then we will merge the 2 executions in a single output/log/report set of files.
 
 For example:
 
@@ -20,12 +21,14 @@ For example:
     ==============================================================================
     Unstable Suite
     ==============================================================================
+    stable_test                                                           | PASS |
+    ------------------------------------------------------------------------------
     unstable_test                                                         | FAIL |
     'False' should be true.
     ------------------------------------------------------------------------------
     Unstable Suite                                                        | FAIL |
-    1 critical test, 0 passed, 1 failed
-    1 test total, 0 passed, 1 failed
+    2 critical tests, 1 passed, 1 failed
+    2 tests total, 1 passed, 1 failed
     ==============================================================================
     Output:  /Users/laurent/Development/github/robotframework-rerunfailed/output/output.xml
     Log:     /Users/laurent/Development/github/robotframework-rerunfailed/output/log.html
